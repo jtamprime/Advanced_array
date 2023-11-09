@@ -22,8 +22,10 @@ let longestWord = function(sentence) {
     let newArr = arr.reduce(function(accum, word){
         if (accum.length > word.length) {
             return accum;
-        } else {
+        } else if (accum.length < word.length){
             return word;
+        } else {
+            return accum;
         }
     })
     return newArr;
